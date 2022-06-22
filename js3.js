@@ -6,62 +6,6 @@ let nav = document.querySelector('#nav');
 
 let scene = 2;
 
-headbox.addEventListener('mouseover', ()=>{
-    scene = 0;
-    headerFn();
-})
-headbox.addEventListener('mouseout',()=>{
-    scene = 2;
-    headerFn();
-})
-window.addEventListener('scroll', ()=>{
-    if(window.pageYOffset<100){
-        scene = 2;
-        headerFn();
-        headbox.addEventListener('mouseover', ()=>{
-            scene = 0;
-            headerFn();
-        })
-        headbox.addEventListener('mouseout',()=>{
-            scene = 2;
-            headerFn();
-        })
-    }
-    else if(window.pageYOffset>100){
-        scene = 1;
-        headerFn();
-        headbox.addEventListener('mouseover', ()=>{
-            scene = 0;
-            headerFn();
-        })
-        header.addEventListener('mouseout',()=>{
-            if(window.pageYOffset<100){
-                scene = 2;
-                headerFn();
-            }
-            else{            
-                scene = 1;
-                headerFn();}
-        })
-    }
-})
-
-function headerFn(){
-    switch(scene){
-        case 0:
-            header.style.top = '0px';
-            nav.style.top = '75px';
-        break;
-        case 1:
-            header.style.top = '-75px';
-            nav.style.top = '-120px';
-        break;
-        case 2:
-            header.style.top = '0px';
-            nav.style.top = '-120px';
-        break;
-    }
-}
 
 
 let box3 = document.querySelectorAll('.box3');
@@ -72,35 +16,35 @@ body.addEventListener('click',()=>{
 })
 
 box3[0].addEventListener('click',()=>{
-    window.scrollTo({top:2500, left:0, behavior:'smooth'});
+    window.scrollTo({top:2900, left:0, behavior:'smooth'});
 })
 box3[1].addEventListener('click',()=>{
-    window.scrollTo({top:2800, left:0, behavior:'smooth'});
+    window.scrollTo({top:3300, left:0, behavior:'smooth'});
 })
 box3[2].addEventListener('click',()=>{
-    window.scrollTo({top:3200, left:0, behavior:'smooth'});
+    window.scrollTo({top:3700, left:0, behavior:'smooth'});
 })
 box3[3].addEventListener('click',()=>{
-    window.scrollTo({top:3600, left:0, behavior:'smooth'});
+    window.scrollTo({top:4100, left:0, behavior:'smooth'});
 })
 box3[4].addEventListener('click',()=>{
-    window.scrollTo({top:3900, left:0, behavior:'smooth'});
+    window.scrollTo({top:4500, left:0, behavior:'smooth'});
 })
 
 box3_1[0].addEventListener('click',()=>{
-    window.scrollTo({top:2100, left:0, behavior:'smooth'});
+    window.scrollTo({top:2500, left:0, behavior:'smooth'});
 })
 box3_1[1].addEventListener('click',()=>{
-    window.scrollTo({top:2100, left:0, behavior:'smooth'});
+    window.scrollTo({top:2500, left:0, behavior:'smooth'});
 })
 box3_1[2].addEventListener('click',()=>{
-    window.scrollTo({top:2100, left:0, behavior:'smooth'});
+    window.scrollTo({top:2500, left:0, behavior:'smooth'});
 })
 box3_1[3].addEventListener('click',()=>{
-    window.scrollTo({top:2100, left:0, behavior:'smooth'});
+    window.scrollTo({top:2500, left:0, behavior:'smooth'});
 })
 box3_1[4].addEventListener('click',()=>{
-    window.scrollTo({top:2100, left:0, behavior:'smooth'});
+    window.scrollTo({top:2500, left:0, behavior:'smooth'});
 })
 
 
@@ -210,16 +154,11 @@ let scene2 = 0;
 
 let nn1 = document.querySelectorAll('.nn1');
 let nn2 = document.querySelectorAll('.nn2');
-
-body.addEventListener('click',()=>{
-    console.log(window.pageYOffset);
-})
-
 nn1[0].addEventListener('click',()=>{
     window.scrollTo({top:100, left:0, behavior:'smooth'});
 })
 nn1[1].addEventListener('click',()=>{
-    window.scrollTo({top:2100, left:0, behavior:'smooth'});
+    window.scrollTo({top:2500, left:0, behavior:'smooth'});
 })
 nn1[2].addEventListener('click',()=>{
     window.scrollTo({top:4500, left:0, behavior:'smooth'});
@@ -276,8 +215,14 @@ nn2[14].addEventListener('click',()=>{
 
 
 let bar = document.querySelectorAll('.bar');
-let ulbox = document.querySelectorAll('.ulbox');
-
+let logo =document.querySelector('#logo');
+let maintitle =document.querySelector('#maintitle');
+logo.addEventListener('click',()=>{
+    location.href = 'index.html';
+})
+maintitle.addEventListener('click',()=>{
+    location.href = 'index.html';
+})
 bar[0].addEventListener('click',()=>{
     console.log('hello');
     location.href = 'index.html';
