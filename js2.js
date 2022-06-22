@@ -4,64 +4,6 @@ let headbox = document.querySelector('#headbox');
 let nav = document.querySelector('#nav');
 
 
-let scene = 2;
-
-headbox.addEventListener('mouseover', ()=>{
-    scene = 0;
-    headerFn();
-})
-headbox.addEventListener('mouseout',()=>{
-    scene = 2;
-    headerFn();
-})
-window.addEventListener('scroll', ()=>{
-    if(window.pageYOffset<100){
-        scene = 2;
-        headerFn();
-        headbox.addEventListener('mouseover', ()=>{
-            scene = 0;
-            headerFn();
-        })
-        headbox.addEventListener('mouseout',()=>{
-            scene = 2;
-            headerFn();
-        })
-    }
-    else if(window.pageYOffset>100){
-        scene = 1;
-        headerFn();
-        headbox.addEventListener('mouseover', ()=>{
-            scene = 0;
-            headerFn();
-        })
-        header.addEventListener('mouseout',()=>{
-            if(window.pageYOffset<100){
-                scene = 2;
-                headerFn();
-            }
-            else{            
-                scene = 1;
-                headerFn();}
-        })
-    }
-})
-
-function headerFn(){
-    switch(scene){
-        case 0:
-            header.style.top = '0px';
-            nav.style.top = '75px';
-        break;
-        case 1:
-            header.style.top = '-75px';
-            nav.style.top = '-120px';
-        break;
-        case 2:
-            header.style.top = '0px';
-            nav.style.top = '-120px';
-        break;
-    }
-}
 
 
 let box = document.querySelectorAll('.box1_01');
@@ -269,8 +211,14 @@ nn2[9].addEventListener('click',()=>{
 
 
 let bar = document.querySelectorAll('.bar');
-let ulbox = document.querySelectorAll('.ulbox');
-
+let logo =document.querySelector('#logo');
+let maintitle =document.querySelector('#maintitle');
+logo.addEventListener('click',()=>{
+    location.href = 'index.html';
+})
+maintitle.addEventListener('click',()=>{
+    location.href = 'index.html';
+})
 bar[0].addEventListener('click',()=>{
     console.log('hello');
     location.href = 'index.html';

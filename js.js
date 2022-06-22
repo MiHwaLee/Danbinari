@@ -45,8 +45,6 @@ function imgltFn(){
             console.log(scene);
 }
 
-btnps.addEventListener('click',imgstFn);
-
 window.onload = automvFn();
 
 function automvFn(){
@@ -88,63 +86,7 @@ function imgmvFn(){
     }
 }
 
-headbox.addEventListener('mouseover', ()=>{
-    scene = 0;
-    headerFn();
-})
-headbox.addEventListener('mouseout',()=>{
-    scene = 2;
-    headerFn();
-})
 
-window.addEventListener('scroll', ()=>{
-    if(window.pageYOffset<100){
-        scene = 2;
-        headerFn();
-        headbox.addEventListener('mouseover', ()=>{
-            scene = 0;
-            headerFn();
-        })
-        headbox.addEventListener('mouseout',()=>{
-            scene = 2;
-            headerFn();
-        })
-    }
-    else if(window.pageYOffset>100){
-        scene = 1;
-        headerFn();
-        headbox.addEventListener('mouseover', ()=>{
-            scene = 0;
-            headerFn();
-        })
-        header.addEventListener('mouseout',()=>{
-            if(window.pageYOffset<100){
-                scene = 2;
-                headerFn();
-            }
-            else{            
-                scene = 1;
-                headerFn();}
-        })
-    }
-})
-
-function headerFn(){
-    switch(scene){
-        case 0:
-            header.style.top = '0px';
-            nav.style.top = '75px';
-        break;
-        case 1:
-            header.style.top = '-75px';
-            nav.style.top = '-120px';
-        break;
-        case 2:
-            header.style.top = '0px';
-            nav.style.top = '-120px';
-        break;
-    }
-}
 
 body.addEventListener('click', ()=>{
     artiz1[0].style.display = 'none';
@@ -331,24 +273,21 @@ nn2[14].addEventListener('click',()=>{
 
 
 let bar = document.querySelectorAll('.bar');
-let ulbox = document.querySelectorAll('.ulbox');
-
+let logo =document.querySelector('#logo');
+let maintitle =document.querySelector('#maintitle');
+logo.addEventListener('click',()=>{
+    location.href = 'index.html';
+})
+maintitle.addEventListener('click',()=>{
+    location.href = 'index.html';
+})
 bar[0].addEventListener('click',()=>{
     location.href = 'index.html';
 })
+
 bar[1].addEventListener('click',()=>{
     location.href = 'index2.html';
 })
 bar[2].addEventListener('click',()=>{
     location.href = 'index3.html';
 })
-ulbox[0].addEventListener('click',()=>{
-    location.href = 'index.html';
-})
-ulbox[1].addEventListener('click',()=>{
-    location.href = 'index2.html';
-})
-ulbox[2].addEventListener('click',()=>{
-    location.href = 'index3.html';
-})
-
