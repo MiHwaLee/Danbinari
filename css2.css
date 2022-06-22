@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 *{margin: 0px;}
-html{font-size: 10px;}
+html{font-size: 10px;
+    font-family: 'Noto Sans KR', sans-serif;}
 
 body{
     display: flex;
@@ -21,7 +23,6 @@ header{
     position: relative;
     width: 1100px;
     height: 75px;
-    border-bottom: 1px solid black;
     transition-duration: 0.5s;
     background-color: white;
     z-index: 1;
@@ -29,35 +30,41 @@ header{
 #logo{
     width: 49px;
     height: 49px;
-    margin-top: 17px;
+    margin: auto 0px auto 0px;
 }
 #maintitle{
     width: 779px;
     position: relative;
-    left: 30px;
+    left: 50px;
     height: 49px;
-    margin-top: 17px;
+    margin: auto 0px auto 0px;
     font-size: 2rem;
     display: flex;
     align-items: center;
 }
 #menu{
-    margin-top: 17px;
+    margin: auto 0px auto 0px;
     width: 260px;
     height: 48px;
     display: flex;
 }
 #menubox{
     display: flex;
+    height: 75px;
 }
+
 .bar{
     width: 73px;
     height: 48px;
-    margin-right: 20px;
+    margin-left: 40px;
     display: flex;
     align-items: center;
     font-size: 2rem;
+    font-weight: 600;
 }
+.bar:hover{cursor: grab;   font-weight: 900;}
+#menu2{font-weight: 900;}
+
 #nav{
     position: absolute;
     top: -120px;
@@ -95,11 +102,22 @@ main{
 
 
 
-nav{
+#navbox{
+    width: 1440px;
+    display: flex;
     position: fixed;
-    left: 100px;
+
+}
+#blank{
+    width: 1000px;
+    position: relative;
+}
+nav{
+    position: relative;
+    right: 120px;
     top: 150px;
     background-color: rgb(241, 241, 241);
+    padding: 0px 10px 10px 10px;
 }
 ul{ color: black;
 }
@@ -108,7 +126,7 @@ ul:hover{
 }
 .nn1{
     margin-top: 10px;
-    margin-right: 10px;
+
     font-size: 1.5rem;
     line-height: 1.8rem;
     font-weight: bold;
@@ -133,6 +151,8 @@ ul:hover{
     width: 1100px;
     height: 65px;
     display: flex;
+    font-weight: bold;
+
 }
 .tithr{
     width: 33%;
@@ -221,7 +241,11 @@ ul:hover{
     display: flex;
     justify-content: space-between;
 }
+.box1_01:hover{cursor: grab;background-color: rgb(241, 241, 241);    font-weight: bold;
+}
 .box1_01{
+    transition-duration: 0.2s;
+
     width: 353px;
     height: 296px;
 }
@@ -269,6 +293,9 @@ ul:hover{
     display: flex;
     justify-content: space-between;
     z-index: 0;
+}
+.box2_01{    transition-duration: 0.2s;}
+.box2_01:hover{cursor: grab;background-color: rgb(241, 241, 241);    font-weight: bold;
 }
 .box2_01img{
     width: 207px;
@@ -334,16 +361,19 @@ ul:hover{
     z-index: 0;
     position: absolute;
 }
+.box3_01:hover{cursor: grab;background-color: rgb(241, 241, 241);    font-weight: bold;
+}
 .box3_01{
     width: 353px;
     height: 290px;
+    transition-duration: 0.2s;
 }
 .box3_01img{
-    width: 100%;
+    width: 353px;
     height: 220px;
 }
 .box3_01txt{
-    width: 100%;
+    width: 353px;
     height: 70px;
     display: flex;
     justify-content: center;
@@ -353,7 +383,7 @@ ul:hover{
     border-bottom: 1px solid black;
 }
 .box3_1{
-    width: 727px;
+    width: 728px;
     height: 580px;
     position :absolute;
     z-index: 1;
